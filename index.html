@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KYC Result</title>
+	  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function callFlutter(msg) {
+        KYCResult.postMessage(msg)
+      };
+    </script>
+</head>
+<body>
+    <div class="page">
+      <h1>KYC Result</h1>
+      <div class="btn Success" onclick="callFlutter('Success')">Success</div>
+      <div class="btn Failed" onclick="callFlutter('Failed')">Failed</div>
+      <div class="btn Unsupported" onclick="callFlutter('Unsupported')">Unsupported</div>
+    </div>
+</body>
+<style>
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .Success{
+    background-color: green;
+  }
+.Failed{
+  background-color: red;
+  }
+  .Unsupported{
+    background-color: rgb(242, 185, 14);
+  }
+  .btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+  }
+</style>
+</html>
